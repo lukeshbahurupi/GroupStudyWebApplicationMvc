@@ -1,0 +1,67 @@
+﻿@*@Model GroupStudyWebApplicationMvc.Models.Employee*@
+@model GroupStudyWebApplicationMvc.ViewModels.EmployeeBusinessLayer
+
+@{
+    //var employee = ViewData["Employee"] as GroupStudyWebApplicationMvc.Models.Employee;
+
+    var employee = ViewBag.Employee1;
+}
+
+<main>
+
+    <h2>@ViewBag.Header1</h2>
+    <table style="font-family:Arial">
+        <tr>
+            <td>Employee ID:</td>
+            <td>@Model.employee1.EmployeeId</td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>@Model.employee1.Name</td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>@Model.employee1.Gender</td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>@Model.employee1.City</td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td>@Model.employee1.Salary</td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td>@Model.employee1.Address</td>
+        </tr>
+    </table>
+    <hr />
+    <h2>@ViewBag.Header1 from Model</h2>
+    <table style="font-family:Arial">
+        <tr>
+            <td>Employee ID:</td>
+            <td>@Model.employee2.EmployeeId</td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>@Model.employee2.Name</td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>@Model.employee2.Gender</td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>@Model.employee2.City</td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td>@Model.employee2.Salary</td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td>@Model.employee2.Address</td>
+        </tr>
+    </table>
+</main>
