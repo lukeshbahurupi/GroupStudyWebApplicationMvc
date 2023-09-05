@@ -1,5 +1,14 @@
 ﻿@model IEnumerable<GroupStudyWebApplicationMvc.Models.Employee>
-
-
+@*@using GroupStudyWebApplicationMvc.Models;*@
+<div class="">
+    <h2>Employee List</h2>
+    <ul class="list-group list-unstyled">
+        @foreach (var el in Model)
+        {
+                @*<li class="list-group-item">@Html.ActionLink(el.Name, "Details", new{ id = el.EmployeeId })</li>*@
+                <li class="list-group-item"><a href="/Employee/Details/@el.EmployeeId">@el.Name</a></li>
+        }
+    </ul>
+</div>
 
 

@@ -23,14 +23,14 @@ namespace GroupStudyWebApplicationMvc.Controllers
             List<Employee> empList = dBContext.Employees.ToList();
             return View(empList);
         }
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
 
             //EmployeeDBContext dBContext = new EmployeeDBContext();
 
-            Employee employee = dBContext.Employees.FirstOrDefault(el => el.EmployeeId == id);
+            Employee Obj = dBContext.Employees.FirstOrDefault(el => el.EmployeeId == id);
 
-            return View(employee); 
+            return View(Obj); 
         }
     }
 }
