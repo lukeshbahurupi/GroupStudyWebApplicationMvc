@@ -12,15 +12,18 @@ namespace GroupStudyWebApplicationMvc.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Employee
+    public partial class Department
     {
-        public int EmployeeId { get; set; }
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public string City { get; set; }
-        public Nullable<decimal> Salary { get; set; }
-        public Nullable<int> DepartmentId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Department()
+        {
+            this.Employees = new HashSet<Employee>();
+        }
     
-        public virtual Department Department { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

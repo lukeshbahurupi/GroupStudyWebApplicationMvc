@@ -2,13 +2,15 @@
 @*@using GroupStudyWebApplicationMvc.Models;*@
 <div class="">
     <h2>Employee List</h2>
-    <ul class="list-group list-unstyled">
+    <ul>
         @foreach (var el in Model)
         {
-                @*<li class="list-group-item">@Html.ActionLink(el.Name, "Details", new{ id = el.EmployeeId })</li>*@
-                <li class="list-group-item"><a href="/Employee/Details/@el.EmployeeId">@el.Name</a></li>
+                <li>@Html.ActionLink(el.Name, "Details","Employee", new{ id = el.EmployeeId }, new { @class = "text-decoration-none text-primary" })</li>
+                @*<li class="list-group-item"><a href="/Employee/Details/@el.EmployeeId">@el.Name</a></li>*@
         }
     </ul>
+    @Html.ActionLink("Back to Department List", "Index", "Department",null, new { @class = "btn  m-2 bg-dark text-light" })
+    @*<button class="btn m-2 bg-light btn-dark"><a style="text-decoration: none; color:black" href="/Department/Index">Back to Department List</a></button>*@
 </div>
 
 

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<GroupStudyWebApplicationMvc.Models.Department>
+
+<div>
+    <h2>Department List</h2>
+    <ul>
+        @foreach(var obj in Model)
+        {
+            <li>@Html.ActionLink(obj.Name, "Index", "Employee", new {id = obj.Id}, new { @class = "text-decoration-none text-primary" })</li>
+            @*<li><a href="/Employee/Index/@obj.Id">@obj.Name</a> </li>*@
+        }
+    </ul>
+</div>
+

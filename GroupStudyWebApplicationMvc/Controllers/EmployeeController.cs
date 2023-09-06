@@ -16,11 +16,11 @@ namespace GroupStudyWebApplicationMvc.Controllers
             dBContext = new EmployeeDBContext();
         }
         // GET: Employee
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
             //EmployeeDBContext dBContext = new EmployeeDBContext();
 
-            List<Employee> empList = dBContext.Employees.ToList();
+            List<Employee> empList = dBContext.Employees.Where(el => el.DepartmentId == id).ToList();
             return View(empList);
         }
         public ActionResult Details(int? id)
